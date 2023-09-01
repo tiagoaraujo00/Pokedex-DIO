@@ -13,7 +13,6 @@ fetch(url)
   .then(data => {
     data.results.forEach(pokemon => {
       urlArray.push(pokemon.url);
-      renderPokemon(pokemon);
     });
 
     const requests = urlArray.map(url => fetch(url));
@@ -22,8 +21,10 @@ fetch(url)
   .then(responses => {
     return Promise.all(responses.map(response => response.json()));
   })
-  .then(pokemons => {
-    console.log('Dados de todos os pokémons:', pokemons);
+  .then(details => {
+    details.forEach(pokemon => {
+      renderPokemon(pokemon);
+    })
   })
   .catch(error => {
     console.error('Erro:', error);
