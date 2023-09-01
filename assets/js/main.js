@@ -1,0 +1,1 @@
+import './pokemonFetch.js';
