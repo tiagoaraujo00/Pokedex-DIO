@@ -1,5 +1,5 @@
 export const getPokemonTypes = (pokemon) => {
-  return pokemon.types.map((pokemon) => `<li class="type">${ pokemon.type.name }</li>`
+  return pokemon.types.map((pokemon) => `<li class="${pokemon.type.name}">${ pokemon.type.name }</li>`
   )
 }
 
