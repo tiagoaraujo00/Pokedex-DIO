@@ -1,4 +1,4 @@
-import { renderPokemon } from './pokemonRender.js';
+import { renderPokemon, getPokemonTypes } from './pokemonRender.js';
 
 const url = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=10';
 const urlArray = [];
@@ -14,7 +14,6 @@ fetch(url)
     data.results.forEach(pokemon => {
       urlArray.push(pokemon.url);
     });
-
     const requests = urlArray.map(url => fetch(url));
     return Promise.all(requests);
   })
@@ -23,6 +22,7 @@ fetch(url)
   })
   .then(details => {
     details.forEach(pokemon => {
+      getPokemonTypes(pokemon)
       renderPokemon(pokemon);
     })
   })
