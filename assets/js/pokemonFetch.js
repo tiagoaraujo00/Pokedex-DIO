@@ -22,6 +22,7 @@ fetch(url)
   })
   .then(details => {
     details.forEach(pokemon => {
+      console.log();
       getPokemonTypes(pokemon)
       renderPokemon(pokemon);
     })

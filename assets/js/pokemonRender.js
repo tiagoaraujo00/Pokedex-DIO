@@ -4,6 +4,7 @@ export const getPokemonTypes = (pokemon) => {
 }
 
 export const renderPokemon = (pokemon) => {
+  const { front_default } = pokemon.sprites.other.dream_world
   const pokemonOl = document.querySelector('.pokemons');
   const pokemonItem = document.createElement('li');
   pokemonItem.classList.add('pokemon');
@@ -15,7 +16,7 @@ export const renderPokemon = (pokemon) => {
         ${getPokemonTypes(pokemon).join('')}
       </ol>
       <img
-        src="https://i.pinimg.com/564x/cc/19/65/cc1965add483ed1d6791c68723784e55.jpg"
+        src=${front_default}
         alt="${pokemon.name}"
       />
     </div>
