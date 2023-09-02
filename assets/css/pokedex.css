@@ -8,7 +8,6 @@
 .pokemon {
   margin: .5rem;
   padding: 2rem 1rem;
-  background-color: #49d0b0;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -22,7 +21,7 @@
 .pokemon .name {
   color: #fff;
   margin-bottom: 0;
-
+  text-transform: capitalize;
 }
 .pokemon .detail {
   display: flex;
@@ -36,12 +35,14 @@
   list-style: none;
 }
 .pokemon .detail .types .type {
-  background-color: #61e1ca;
   color: #fff;
   border-radius: 1rem;
   padding: .25rem .5rem;
   margin: .25rem 0;
   font-size: .625rem;
+  text-align: center;
+  filter: brightness(1.1);
+  text-transform: capitalize;
 }
 .pokemon .detail img {
   max-width: 100%;
@@ -60,7 +61,7 @@
 .fire {
   background-color: #FF9D55
 }
-.eletrico {
+.eletric {
   background-color: #F4D23C
 }
 .dragon {
@@ -90,14 +91,17 @@
 .pedra {
   background-color: #C5B78C
 }
-.grama {
+.grass {
   background-color: #63BC5A
 }
 .gelo {
   background-color: #73CEC0
 }
-.fada {
+.fairy {
   background-color: #EC8FE6
+}
+.water {
+  background-color: #0B6DC3;
 }
 
 @media screen and (min-width: 576px) {
