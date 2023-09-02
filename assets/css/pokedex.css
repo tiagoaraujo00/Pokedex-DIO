@@ -47,6 +47,59 @@
   max-width: 100%;
   height: 70px;
 }
+
+.poison {
+  background-color: #AA6BC8
+}
+.normal {
+ background-color: #939EA4
+}
+.bug {
+  background-color: #91C12F
+}
+.fire {
+  background-color: #FF9D55
+}
+.eletrico {
+  background-color: #F4D23C
+}
+.dragon {
+  background-color: #0B6DC3
+}
+.fisico {
+  background-color: #EA551E
+}
+.lutador {
+  background-color: #CD416B
+}
+.terrestre {
+  background-color: #D97845
+}
+.fantasma {
+  background-color: #5269AD
+}
+.psiquico {
+  background-color: #FA7179
+}
+.sombrio {
+  background-color: #5A5465
+}
+.voador {
+  background-color: #8FA9DE
+}
+.pedra {
+  background-color: #C5B78C
+}
+.grama {
+  background-color: #63BC5A
+}
+.gelo {
+  background-color: #73CEC0
+}
+.fada {
+  background-color: #EC8FE6
+}
+
 @media screen and (min-width: 576px) {
   .pokemons {
     grid-template-columns: 1fr 1fr 1fr;
