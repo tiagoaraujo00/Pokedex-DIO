@@ -1,5 +1,5 @@
 export const getPokemonTypes = (pokemon) => {
-  return pokemon.types.map((pokemon) => `<li class="${pokemon.type.name}">${ pokemon.type.name }</li>`
+  return pokemon.types.map((pokemon) => `<li class="type">${ pokemon.type.name }</li>`
   )
 }
 
@@ -7,7 +7,7 @@ export const renderPokemon = (pokemon) => {
   const { front_default } = pokemon.sprites.other.dream_world
   const pokemonOl = document.querySelector('.pokemons');
   const pokemonItem = document.createElement('li');
-  pokemonItem.classList.add('pokemon');
+  pokemonItem.classList.add(`pokemon`, `${pokemon.types[0].type.name}`);
   pokemonItem.innerHTML = `
     <span class="number">#${pokemon.order}</span>
     <span class="name">${pokemon.name}</span>
