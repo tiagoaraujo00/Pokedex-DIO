@@ -1,3 +1,4 @@
+
 export const getPokemonTypes = (pokemon) => {
   return pokemon.types.map((pokemon) => `<li class="type ${pokemon.type.name}">${ pokemon.type.name }</li>`
   )
@@ -20,7 +21,6 @@ export const renderPokemon = (pokemon) => {
         alt="${pokemon.name}"
       />
     </div>
-  `;
-
-  pokemonOl.appendChild(pokemonItem);
+  `
+  pokemonOl.appendChild(pokemonItem)
 };
