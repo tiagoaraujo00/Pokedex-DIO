@@ -1,9 +1,13 @@
 import { renderPokemon, getPokemonTypes } from './pokemonRender.js';
+const loadMoreButton = document.querySelector('#loadMorePokemons');
 
-const url = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=10';
+let offset = 0
+const limit = 5
+const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
 const urlArray = [];
 
-fetch(url)
+const getPokemons = (offset, limit) => {
+  fetch(url)
   .then(response => {
     if (!response.ok) {
       throw new Error('Erro na requisição');
@@ -29,3 +33,9 @@ fetch(url)
   .catch(error => {
     console.error('Erro:', error);
   });
+}
+getPokemons(offset, limit)
+loadMoreButton.addEventListener('click', () => {
+  offset += limit
+  getPokemons(offset, limit)
+})
